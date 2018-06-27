@@ -1,8 +1,10 @@
-package springdemo;
+package spring_dependency_injection;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringHelloApp {
+import springdemo.CricketCoach;
+
+public class SetterDemoApp {
 
 	public static void main(String[] args) {
 		
@@ -11,11 +13,13 @@ public class SpringHelloApp {
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		//retrieve bean from spring container
-		Coach coach = context.getBean("myCoach", Coach.class);
+		CricketCoach coach = context.getBean("myCricketCoach", CricketCoach.class);
 		
 		//call methods on the bean
 		System.out.println(coach.getDailyWorkout());
 		System.out.println(coach.getDailyFortune());
+		System.out.println(coach.getEmailAdress());
+		System.out.println(coach.getTeam());
 		
 		//close the context
 		context.close();

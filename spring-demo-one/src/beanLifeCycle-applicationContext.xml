@@ -7,39 +7,18 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- load the properties file -->
-	<context:property-placeholder location="classpath:sport.properties"/>
-
     <!-- Define your beans here -->
     <bean id="myFortune"
     	class="services.HappyFortuneService">
     </bean>
     
-    <bean id="mySadFortune"
-    	class="services.SadFortuneService">
-    </bean>
-    
     <bean id="myCoach"
-    	class = "springdemo.TrackCoach">
+    	class = "springdemo.TrackCoach"
+    	destroy-method="doMyDestroyStuff"
+    	init-method="doMyStatupStuff">
     	
     	<!-- set up constructor injection -->
     	<constructor-arg ref="myFortune"/>
-    </bean>
-    
-    <bean id="myFootballCoach"
-    	class = "springdemo.FootballCoach">
-    	
-    	<!-- set up constructor injection -->
-    	<constructor-arg ref="mySadFortune"/>
-    </bean>
-    
-    <bean id="myCricketCoach"
-    	class="springdemo.CricketCoach">
-    	
-    	<!-- set up setter injection -->
-    	<property name="fortuneService" ref="myFortune" />
-    	<property name="emailAdress" value="${foo.emailAdress}" />
-    	<property name="team" value="${foo.team}" />
     </bean>
     
 </beans>

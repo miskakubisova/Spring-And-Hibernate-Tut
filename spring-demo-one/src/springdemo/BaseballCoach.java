@@ -1,5 +1,7 @@
 package springdemo;
 
+import services.FortuneService;
+
 public class BaseballCoach implements Coach{
 	
 	private FortuneService fortuneService;

@@ -1,4 +1,7 @@
-package springdemo;
+package app;
+
+import springdemo.Coach;
+import springdemo.TrackCoach;
 
 public class MyApp {
 

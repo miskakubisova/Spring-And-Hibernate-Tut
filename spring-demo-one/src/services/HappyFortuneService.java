@@ -1,4 +1,4 @@
-package springdemo;
+package services;
 
 public class HappyFortuneService implements FortuneService {
 

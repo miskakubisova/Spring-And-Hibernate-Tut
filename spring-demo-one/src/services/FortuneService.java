@@ -1,4 +1,4 @@
-package springdemo;
+package services;
 
 public interface FortuneService {
 	

@@ -1,0 +1,13 @@
+/springdemo/
+/sport.properties
+/beanScope-applicationContext.xml
+/beanScope-applicationContext.out.xml
+/beanScope-applicationContext.out.out.xml
+/beanLifeCycle-applicationContext.xml
+/spring_ioc/
+/spring_dependency_injection/
+/sping_scopes/
+/spring_life_cycle/
+/services/
+/spring_annotations/
+/app/
